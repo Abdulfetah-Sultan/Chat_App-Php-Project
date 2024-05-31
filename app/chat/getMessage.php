@@ -14,7 +14,6 @@ if (isset($_SESSION['username'])) {
 	$id_2  = $_POST['id_2'];
 	$opend = 0;
 
-    
 	$sql = "SELECT * FROM chats
 	        WHERE to_id=?
 	        AND   from_id= ?
@@ -47,9 +46,10 @@ if (isset($_SESSION['username'])) {
 					    </small>      	
 				  </p>        
 	            <?php
-            }
+	    	
 	    }
 	}
+
  }
 
 }else {

@@ -27,7 +27,7 @@ if (isset($_SESSION['username'])) {
     # if the message inserted
     if ($res) {
     	/**
-       check if this is the first
+    check if this is the first
        conversation between them
        **/
        $sql2 = "SELECT * FROM conversations
@@ -36,7 +36,7 @@ if (isset($_SESSION['username'])) {
        $stmt2 = $conn->prepare($sql2);
 	   $stmt2->execute([$from_id, $to_id, $from_id, $to_id]);
 
-	    // setting up the time Zone
+	    
 		// It Depends on your location or your P.c settings
 		define('TIMEZONE', 'Africa/Addis_Ababa');
 		date_default_timezone_set(TIMEZONE);
@@ -60,6 +60,7 @@ if (isset($_SESSION['username'])) {
 		</p>
 
     <?php 
+
      }
   }
 }else {
